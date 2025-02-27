@@ -16,10 +16,12 @@ In Go numbers can be compared using the following relational and equality operat
 
 The result of the comparison is always a boolean value, so either true or false.
 
+```go
 a := 3
 
 a != 4 // true
 a > 5  // false
+```
 
 The comparison operators above can also be used to compare strings. In that case a lexicographical (dictionary) order is applied. For example:
 
