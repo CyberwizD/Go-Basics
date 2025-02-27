@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	text := "Hello, World!"
@@ -14,4 +17,16 @@ func main() {
 	// `strings.Repeat` returns a string with a substring given as an argument repeated many times
 	strings.Repeat("Go", 3)
 	// => "GoGoGo"
+
+	// String Formatting
+
+	food := "taco"
+	message := fmt.Sprintf("Bring me a %s", food)
+	fmt.Println(message)
+	// Returns: Bring me a taco
+
+	number := 4.3242
+	formattedNumber := fmt.Sprintf("%.2f", number)
+	fmt.Println(formattedNumber)
+	// Returns: 4.32
 }
