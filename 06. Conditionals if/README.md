@@ -2,6 +2,30 @@
 
 Conditionals in Go are similar to conditionals in other languages. The underlying type of any conditional operation is the `bool` type, which can have the value of `true` or `false`. Conditionals are often used as flow control mechanisms to check for various conditions.
 
+## Comparison
+In Go numbers can be compared using the following relational and equality operators.
+
+| Comparison        | Operator |
+|-------------------|----------|
+| Equal             | ==       |
+| Not Equal         | !=       |
+| Less              | <        |
+| Less or Equal     | <=       |
+| Greater           | >        |
+| Greater or Equal  | >=       |
+
+The result of the comparison is always a boolean value, so either true or false.
+
+a := 3
+
+a != 4 // true
+a > 5  // false
+
+The comparison operators above can also be used to compare strings. In that case a lexicographical (dictionary) order is applied. For example:
+
+	"apple" < "banana"  // true
+	"apple" > "banana"  // false
+
 ## If Statements
 
 For checking a particular case, an `if` statement can be used, which executes its code if the underlying condition is `true`, like this:
