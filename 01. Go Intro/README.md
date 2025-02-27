@@ -19,26 +19,19 @@ The recommended style of naming in Go is that identifiers will be named using `c
 
 ```go
 package lasagna
+```
 
-Variables
+## Variables
 Go is statically-typed, meaning all variables must have a defined type at compile-time.
 
-Variables can be defined by explicitly specifying a type:
+Variables can be defined by explicitly specifying a type
 
-var explicit int // Explicitly typed
-
-count := 1 // Assign initial value
-count = 2  // Update to new value
-
-count = false // This throws a compiler error due to assigning a non `int` type
-
-Constants hold a piece of data just like variables, but their value cannot change during the execution of the program.
+## Constants 
+Constans hold a piece of data just like variables, but their value cannot change during the execution of the program.
 
 Constants are defined using the const keyword and can be numbers, characters, strings, or booleans:
 
-const Age = 21 // Defines a numeric constant 'Age' with the value of 21
-
-Functions
+## Functions
 Go functions accept zero or more parameters. Parameters must be explicitly typed; there is no type inference.
 
 Values are returned from functions using the return keyword. A function is invoked by specifying the function name and passing arguments for each of the function's parameters.
@@ -47,17 +40,3 @@ Note that Go supports two types of comments:
 
 Single line comments are preceded by //
 Multiline comments are inserted between /* and */
-
-Example of Go functions:
-
-package greeting
-
-// Hello is a public function.
-func Hello(name string) string {
-    return hi(name)
-}
-
-// hi is a private function.
-func hi(name string) string {
-    return "hi " + name
-}
