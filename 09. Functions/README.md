@@ -24,9 +24,9 @@ The variadic parameter must be the last parameter of the function.
 
 The way variadic functions work is by converting the variable number of arguments to a slice of the type of the variadic parameter.
 
-Sometimes you already have a slice and want to pass that to a variadic function. This can be achieved by passing the slice followed by ```go....``` That will tell the compiler to use the slice as is inside the variadic function. The step described above where a slice is created will simply be omitted in this case.
+Sometimes you already have a slice and want to pass that to a variadic function. This can be achieved by passing the slice followed by ```....``` That will tell the compiler to use the slice as is inside the variadic function. The step described above where a slice is created will simply be omitted in this case.
 
-It is important to note that ```go...``` is not an actual rest and spread operator in Go. For example, the following code does not compile.
+It is important to note that ```...``` is not an actual rest and spread operator in Go. For example, the following code does not compile.
 
 ```go
 func myFunc(a int, b int, c int) {
@@ -39,4 +39,4 @@ func main() {
 }
 ```
 
-This results in invalid use of ```go...``` in call to myFunc because myFunc does not have a variadic parameter. ```go...``` really only works in the specific scenarios explained above.
+This results in invalid use of ```...``` in call to myFunc because myFunc does not have a variadic parameter. ```...``` really only works in the specific scenarios explained above.
