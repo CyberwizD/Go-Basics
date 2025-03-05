@@ -34,7 +34,7 @@ for k, v := range hash {
 ```
 
 ## Note
-It may seem the above output is incorrect, as one would expect the first key/value pair on the declaration of the ```gomap 9: 10``` to be the first one printed and not the last. However, maps are unordered by nature - there isn't a first or last key/value pair. Because of that, when iterating over the entries of a map, the order by which entries will be visited will be random and not follow any specific pattern. This means the above output is possible but might differ from what you get if you try to run this yourself.
+It may seem the above output is incorrect, as one would expect the first key/value pair on the declaration of the ```map 9: 10``` to be the first one printed and not the last. However, maps are unordered by nature - there isn't a first or last key/value pair. Because of that, when iterating over the entries of a map, the order by which entries will be visited will be random and not follow any specific pattern. This means the above output is possible but might differ from what you get if you try to run this yourself.
 
 ## Iteration Omitting Key or Value
 In Go, an unused variable will raise an error at build time. Sometimes you only need the value.
