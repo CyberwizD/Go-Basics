@@ -101,47 +101,6 @@ In this example, new creates an instance of the struct Shape with all the values
 ## Note
 More often than not, you will not see new instances of structs created using the new built-in. Always prefer using a struct literal, a custom New function, or any other function provided by the package that can help you build a struct. Use the new built-in to create new instances of structs as a last resort.
 
-# Non-struct Types in Go
-
-In Go, you've previously seen how to define struct types. However, it is also possible to define non-struct types, which you can use as an alias for a built-in type declaration. You can define receiver functions on these non-struct types in the same way as struct types to extend their behavior.
-
-## Example: Defining a Non-struct Type
-
-You can create a custom type based on a built-in type, such as `string`:
-
-```go
-type Name string
-
-func SayHello(n Name) {
-  fmt.Printf("Hello %s\n", n)
-}
-
-n := Name("Fred")
-SayHello(n)
-// Output: Hello Fred
-```
-
-## Example: Non-struct Type Composed of Arrays
-You can also define non-struct types composed of arrays and maps. In the following example, we define a custom type Names, which is a slice of strings:
-
-```go
-type Names []string
-
-func SayHello(n Names) {
-  for _, name := range n {
-    fmt.Printf("Hello %s\n", name)
-  }
-}
-
-n := Names([]string{"Fred", "Bill"})
-SayHello(n)
-// Output:
-// Hello Fred
-// Hello Bill
-```
-
-This shows how non-struct types can be used to extend basic data types with methods that add functionality or enhance readability.
-
 ## References
 - [Go by Example: Structs](https://gobyexample.com/structs)
 - [A Tour of Go: Structs](https://tour.golang.org/moretypes/2)
