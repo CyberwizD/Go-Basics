@@ -21,9 +21,11 @@ func parseTime() time.Time {
     layout := "Mon, 01/02/2006, 15:04"
 
     t, err := time.Parse(layout, date) // time.Time, error
+
     if err != nil {
         panic(err)
     }
+
     return t
 }
 ```
@@ -78,13 +80,14 @@ You can use different combinations of layout options to customize the format. Th
 ## Accessing Specific Time Components
 The time.Time type provides several methods to access particular components of time. Some of these methods include:
 
-Hour() - Returns the hour.
-Month() - Returns the month.
-Day() - Returns the day of the month.
-Additional Features of time Package
+* **Hour()** - Returns the hour.
+* **Month()** - Returns the month.
+* **Day()** - Returns the day of the month.
+
+## Additional Features of time Package
 The time package in Go also includes:
 
-## Duration: A type representing elapsed time.
+### Duration: A type representing elapsed time.
 Time zones and locations.
 Timers and other related functionality.
 You can explore more in the official documentation.
