@@ -88,7 +88,7 @@ for index, char := range myString {
 // Index: 7	Character: o		Code Point: U+006F
 ```
 
-Since runes can be stored as 1, 2, 3, or 4 bytes, the length of a string may not always equal the number of characters in the string. Use the built-in len function to get the length of a string in bytes and the utf8.RuneCountInString function to get the number of runes in a string:
+Since runes can be stored as 1, 2, 3, or 4 bytes, the length of a string may not always equal the number of characters in the string. Use the built-in len function to get the length of a `string` in bytes and the `utf8.RuneCountInString` function to get the number of runes in a string:
 
 ```go
 import "unicode/utf8"
